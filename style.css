@@ -90,6 +90,10 @@ body.stop-transitions * {
   width: 240px;
 }
 
+.imgLink {
+  text-indent: -9999px;
+}
+
 #logo {
   margin-left: 20px;
   width: calc(100% - 40px);
@@ -133,6 +137,7 @@ body.stop-transitions * {
 }
 
 .navBtn a img {
+  height: 10px;
   width: 10px;
   margin-left: 5px;
   transform: rotate(0deg);
