@@ -1,8 +1,8 @@
 ::selection {
-  background: #175F79;
+  background: rgba(0, 121, 193, 0.2);
 }
 ::-moz-selection {
-  background: #175F79;
+  background: rgba(0, 121, 193, 0.2);
 }
 
 /**::-webkit-scrollbar {
@@ -15,6 +15,7 @@
 }
 */
 
+
 a {
   text-decoration: none;
 }
@@ -24,7 +25,7 @@ body {
   font-family: Roboto, Arial;
   overflow-y: scroll;
   overflow-x: hidden;
-  background: rgb(6 24 31);
+  background: white;
 }
 
 body.stop-transitions * {
@@ -53,9 +54,8 @@ body.stop-transitions * {
   left: 0;
   right: 0;
   height: 80px;
-  /*background: rgba(6, 24, 31, 0.7);*/
-  background: rgb(7 7 7 / 80%);
-  /*background: rgb(19 77 99 / 70%);*/
+  background: rgb(238 238 238 / 80%);
+  background: linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 5%, rgba(238,238,238,0.8) 20%);
   backdrop-filter: saturate(180%) blur(25px);
   -webkit-backdrop-filter: saturate(180%) blur(25px);
 }
@@ -89,7 +89,7 @@ body.stop-transitions * {
   display: inline-block;
   position: relative;
   height: 100%;
-  width: 240px;
+  width: 140px;
 }
 
 .imgLink {
@@ -97,10 +97,10 @@ body.stop-transitions * {
 }
 
 #logo {
-  margin-left: 20px;
-  width: calc(100% - 40px);
+  margin-left: 0px;
+  width: calc(100%);
   height: 100%;
-  background-image: url('images/logow.svg');
+  background-image: url('images/logo.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -130,15 +130,16 @@ body.stop-transitions * {
   padding-right: 15px;
   line-height: 80px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 900;
   text-transform: uppercase;
-  color: white;
+  color: #000;
   letter-spacing: 1px;
 
   transition: all 300ms;
 }
 
 .navBtn a img {
+  opacity: 1;
   height: 10px;
   width: 10px;
   margin-left: 5px;
@@ -158,7 +159,7 @@ body.stop-transitions * {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #196581;
+  background-color: #0079C1;
   opacity: 0;
   transition: opacity 300ms, transform 300ms;
 }
@@ -224,8 +225,8 @@ body.stop-transitions * {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #AAA;
-  font-weight: 300;
+  color: #333;
+  font-weight: 400;
 }
 .navBtn .navGrid {
   z-index: 100;
@@ -233,7 +234,7 @@ body.stop-transitions * {
   padding: 70px 20px 20px 20px;
   display: grid;
   column-gap: 20px;
-  background: rgba(6, 24, 31, 0.9);
+  background: rgb(238 238 238 / 70%);
   backdrop-filter: saturate(180%) blur(25px);
   -webkit-backdrop-filter: saturate(180%) blur(25px);
 }
@@ -244,24 +245,26 @@ body.stop-transitions * {
 
 .navBtn .navGrid a {
   transform: translateY(-10px);
-  color: #EEE;
+  color: #333;
   font-size: 20px;
   letter-spacing: -1px;
+  font-weight: 500;
   padding: 20px;
 
-  transition: all 400ms;
+  transition: all 150ms;
 }
 .navBtn:not(.oneLine) .navGrid a:not(:nth-last-child(-n+4)) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .navBtn.oneLine .navGrid a:not(:last-child) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 
 .navBtn .navGrid a:hover{
   transform: scale(1.03);
-  background: rgba(255, 255, 255, 0.2);
+  color: #0079C1;
+  background: rgb(0 121 193 / 10%);
   border-bottom: 0px solid rgba(255, 255, 255, 0) !important;
 }
 .navBtn .navGrid a.activePage {
@@ -390,6 +393,8 @@ body.stop-transitions * {
   top: -5px;
   white-space: nowrap;
   line-height: 30px;
+  letter-spacing: -0.5px;
+  font-weight: 800;
   padding: 0px 10px;
   pointer-events: none;
   transform: translateX(20px);
@@ -514,7 +519,7 @@ body.stop-transitions * {
   z-index: 1;
   position: absolute;
   top: 50vh;
-  left: calc(50vw - var(--sw)/2 + 40px);
+  left: calc(50vw - var(--sw)/2);
   transform: translate(-50%,-50%);
 }
 #heroText span {
@@ -532,7 +537,7 @@ body.stop-transitions * {
 #siteSubtitle {
   font-size: 30px;
   font-weight: 300;
-  color: #AAA;
+  color: #EEE;
   margin-top: 20px;
 }
 
@@ -564,8 +569,8 @@ body.stop-transitions * {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0,0,0,0.7);
-  background: linear-gradient(90deg,rgb(6 24 31/15%) 0%,rgb(6 24 31/35%) 100%),linear-gradient(to top,rgb(6 24 31) 5%,rgb(20 20 20/40%) 60%) !important;
+  background: rgba(255 255 255,0.4);
+  background: linear-gradient(to top, rgba(255,255,255,1) 10%, rgba(64,64,64,0.6) 60%, rgba(0,0,0,0.6) 100%)
 }
 
 
@@ -723,14 +728,14 @@ body.stop-transitions * {
   outline: none;
   padding: 5px;
   font-weight: 1000;
-  border: 4px solid #134D62;
+  border: 4px solid #0079C1;
   background: none;
   transition: all 200ms;
 }
 #searchFormField::placeholder {
     font-weight: 900;
     font-size: 16px;
-    color: #134D62;
+    color: #0079C1;
 }
 #searchFormField:hover::placeholder {
     font-weight: 900;
@@ -738,7 +743,7 @@ body.stop-transitions * {
     color: white;
 }
 #searchFormField:hover {
-  background: #134D62;
+  background: #0079C1;
   color: white;
 }
 #searchFormField:focus {
@@ -746,7 +751,7 @@ body.stop-transitions * {
   color: black;
 }
 #searchFormField:focus::placeholder {
-  color: #134D62;
+  color: #0079C1;
 }
 #searchFormSubmit {
   cursor: pointer;
@@ -832,8 +837,8 @@ body.stop-transitions * {
 #scrollDownBtn {
   z-index: 1;
   position: absolute;
-  bottom: 60px;
-  left: 80px;
+  bottom: 20px;
+  left: 0px;
   right: 0;
   margin: 0;
   padding: 0;
@@ -854,19 +859,19 @@ body.stop-transitions * {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 900;
-  border: 3px solid #134D62;
+  border: 3px solid #0079C1;
   padding: 14px 20px;
   transition: all 100ms;
-  background: #134D62;
+  background: #0079C1;
   display: table;
   margin: 0 auto;
 }
 
 .rectButton span:hover {
   transform: scale(1.05);
-  color: white;
+  color: #0079c1;
   background: none;
-  border: 3px solid #134D62;
+  border: 3px solid #0079C1;
 }
 
 
@@ -874,6 +879,7 @@ body.stop-transitions * {
 
 
 main {
+  transform: translate3d(0,0,0);
   overflow-x: hidden;
   margin-top: 80px;
 }
@@ -900,11 +906,11 @@ textarea,
 
 #tipos {
   position: relative;
-  left: 80px;
+  left: 0px;
   right: var(--sw);
-  width: calc(100vw - 80px - var(--sw));
+  width: calc(100vw - var(--sw));
   padding: 150px 100px 100px 100px;
-  background: #06181F;
+  background: ;
   color: white;
   height: auto;
 }
@@ -913,7 +919,7 @@ main h2 {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #AAA;
+  color: #333;
   font-weight: 300;
   margin-bottom: 60px;
 }
@@ -939,8 +945,8 @@ main h2 {
 }
 
 .tipo:hover {
-  background: #092632;;
-  border: 0px solid #092632;;
+  background: rgb(0 121 193 / 10%);
+  border: 0px solid rgb(0 121 193 / 10%);
   transform: scale(1.05) perspective(1px);
 }
 .tipo:active {
@@ -950,10 +956,10 @@ main h2 {
 
 .tipoTitle {
   display: block;
-  color: #EEE;
+  color: #333;
   letter-spacing: -1px;
-  font-size: 18px;
-  font-weight: 900;
+  font-size: 20px;
+  font-weight: 500;
 
   text-align: center;
   transition: all 100ms;
@@ -961,7 +967,7 @@ main h2 {
 
 
 .tipo:hover .tipoTitle {
-  color: #EEE;
+  color: #0079C1;
 }
 
 .tipoImg {
@@ -988,19 +994,18 @@ main h2 {
 
 #landingPageParagraphs {
   position: relative;
-  left: 80px;
-  width: calc(100vw - var(--sw) - 80px);
+  left: 0px;
+  width: calc(100vw - var(--sw));
   padding: 50px 100px 60px 100px;
   background: #092632;
-  background: linear-gradient(0deg,rgb(9 38 55) 10%,rgb(9 38 50/40%) 40%) !important;
+  background: linear-gradient(0deg,rgb(0 121 193 / 10%) 10%,rgb(0 121 193 / 5%) 60%) !important;
 }
 
 #landingPageParagraphs h2 {
-  color: #AAA !important;
 }
 
 #landingPageParagraphs p {
-  color: #CCC;
+  color: #333;
   text-align: left;
   margin-bottom: 40px;
   line-height: 30px;
@@ -1017,7 +1022,7 @@ main h2 {
 main p > a,
 #contactenos a {
   position: relative;
-  color: #a1cfe2;
+  color: #0079c1;
   font-weight: 900;
   white-space: nowrap
 }
@@ -1029,7 +1034,7 @@ main p > a:after,
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #a1cfe2;
+  background-color: #0079c1;
   opacity: 0;
   transition: opacity 300ms, transform 300ms;
 }
@@ -1060,10 +1065,10 @@ main p > a:hover:after,
   margin: 0;
   padding: 50px 100px 100px 100px;
   position: relative;
-  left: 80px;
-  width: calc(100vw - var(--sw) - 80px);
+  left: 0px;
+  width: calc(100vw - var(--sw));
   background: #0c3141;
-  background: linear-gradient(0deg,rgb(9 38 55) 10%,rgb(9 38 50/40%) 40%) !important;
+  background: linear-gradient(0deg,rgb(0 121 193 / 10%) 10%,rgb(0 121 193 / 5%) 60%) !important;
 }
 
 .form h2 {
@@ -1074,7 +1079,7 @@ main p > a:hover:after,
   font-size: 40px;
   font-weight: 300;
   text-transform: uppercase;
-  color: #AAA;
+  color: #333;
 }
 
 #contactenos > p {
@@ -1083,7 +1088,7 @@ main p > a:hover:after,
   right: 100px;
   font-size: 20px;
   width: calc(100% - 200px);
-  color: #CCC;
+  color: #555;
   text-align: center;
   font-weight: 900;
   line-height: 30px;
@@ -1133,35 +1138,33 @@ textarea {
 }
 
 .wpcf7-form-control:not(.wpcf7-submit):not(.wpcf7-acceptance) {
-  color: #CCC;
+  color: #333;
   outline: none;
   padding: 10px;
   font-weight: 900;
-  border: 4px solid #134D62;
-  background: rgba(0, 0, 0, 0.05);
+  border: 4px solid #0079C1;
+  background: rgba(0, 121, 193, 0.1);
   transition: color 200ms, background 200ms;
 }
 .wpcf7-form-control:not(.wpcf7-submit):not(.wpcf7-acceptance)::placeholder {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 14px;
-  color: #AAA;
+  color: #333;
   transition: color 200ms;
 }
 .wpcf7-form-control:not(.wpcf7-submit):not(.wpcf7-acceptance):hover::placeholder {
-  font-weight: 100;
-  font-size: 14px;
-  color: #AAA;
+  color: #fff;
 }
 .wpcf7-form-control:not(.wpcf7-submit):not(.wpcf7-acceptance):hover {
-  background: #134D62;
+  background: #0079C1;
   color: white;
 }
 .wpcf7-form-control:not(.wpcf7-submit):not(.wpcf7-acceptance):focus {
   background: rgba(255, 255, 255, 0.1);
-  color: #EEE;
+  color: #0079c1;
 }
 .wpcf7-form-control:not(.wpcf7-submit):not(.wpcf7-acceptance):focus::placeholder {
-  color: #EEE;
+  color: rgba(0, 121, 193, 0.5);
 }
 
 
@@ -1173,7 +1176,7 @@ textarea {
   position: relative;
   left: 20px;
   font-size: 20px;
-  color: #CCC;
+  color: #333;
   font-weight: 300;
   line-height: 80px;
 }
@@ -1192,17 +1195,17 @@ textarea {
   left: -50px;
   height: 25px;
   width: 25px;
-  border: 4px solid #134D62;
+  border: 4px solid #0079C1;
   transition: all 200ms;
 }
 
 .contactFormAcceptance:hover input ~ .checkmark {
-  background-color: #0b2c38;
+  background-color: rgba(0, 121, 193, 0.5);
 }
 
 /* When the checkbox is checked, add a blue background */
 .contactFormAcceptance input:checked ~ .checkmark {
-  background-color: #134D62;
+  background-color: #0079C1;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) 
@@ -1226,7 +1229,7 @@ textarea {
   top: 4px;
   width: 5px;
   height: 10px;
-  border: solid #DDD;
+  border: solid #fff;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg) ;
 }
@@ -1241,33 +1244,33 @@ textarea {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 900;
-  border: 3px solid #134D62;
+  border: 3px solid #0079C1;
   line-height: 0;
   padding: 20px 20px 20px 20px;
   transition: all 100ms;
-  background: #134D62;
+  background: #0079C1;
 }
 
 .wpcf7-submit:hover {
   transform: scale(1.1);
   color: white;
   background: none;
-  border: 3px solid #134D62;
+  border: 3px solid #0079C1;
 }
 
 
 
 footer {
   position: relative;
-  left: 80px;
-  width: calc(100vw - var(--sw) - 80px);
+  left: 0px;
+  width: calc(100vw - var(--sw));
   padding: 80px 100px 100px 100px;
 }
 
 footer hr,
 main hr {
-  background: #134D62;
-  border: 1px solid #134D62;
+  background: #0079C1;
+  border: 1px solid #0079C1;
 }
 
 .site-info {
@@ -1277,15 +1280,15 @@ main hr {
 
 .site-info > div {
   margin: 10px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #111;
 }
 
 .footerDivHeader {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #AAA;
-  font-weight: 300;
+  color: #333;
+  font-weight: 400;
 }
 
 .site-info ul {
@@ -1299,7 +1302,7 @@ main hr {
 }
 
 .site-info li a {
-  color: rgba(255, 255, 255, 0.6);
+  color: #333;
   font-weight: 300;
 }
 
@@ -1317,7 +1320,7 @@ main hr {
 }
 
 .copyright {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.6);
   font-weight: 900;
   margin: 10px;
 }
@@ -1367,7 +1370,7 @@ main:not(.indexMain) {
   z-index: 1;
   position: absolute;
   top: 0;
-  padding: 60px 0px 0px 100px;
+  padding: 60px 0px 0px 0px;
 }
 
 #pageH1 {
@@ -1787,7 +1790,7 @@ article.imgTxtVerArticle h2.bright {
 
 
 .itemsGridElement .itemImg {
-  background: ;
+  height: 100%;
 }
 .itemsGridElement .itemDescr {
   background: ;
@@ -1849,7 +1852,7 @@ article.imgTxtVerArticle h2.bright {
 .tagBlue li a {
   font-weight: 400;
   color: #fff;
-  background: #134D62;
+  background: #0079C1;
 }
 
 .tagList li a:hover {
@@ -1937,6 +1940,7 @@ article.imgTxtVerArticle h2.bright {
 
 
 iframe#itemYT {
+  max-height: calc(20vh + 200px);
   height: 100%;
   width: calc(100% - 50px);
   padding-left: 50px;
@@ -2062,11 +2066,14 @@ iframe#itemYT {
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1100px) {
   .navBtn > a,
   .navBtn > label {
     letter-spacing: -0.5px;
   }
+}
+
+@media screen and (max-width: 1050px) {
   .footerDivHeader {
     font-size: 12px;
     letter-spacing: 2px;

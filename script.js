@@ -16,16 +16,19 @@ $( document ).ready(function() {
 
 
   var articleRepertory = {"Principio" : 0};
+  console.log(articleRepertory)
   var articles = $('main').children(".section");
   var articleCount = articles.length;
   console.log(articleCount)
   if (articleCount != 0) {
     for (i=0 ; i < articleCount ; i+=1) {
       var articleName = articles.eq(i).data('name');
-      $("<div class='level' data-after='"+articleName+"'></div>").insertBefore("#arrowDown");
+      $("<div class='level' data-after='"+articleName+"'></div>").insertBefore("#contactenosBtn");
       articleRepertory[articleName] = $('[data-name="' + articleName + '"]').offset().top;
     }
-    articleRepertory["Fin"] = $('[data-name="' + articleName + '"]').offset().top + $('[data-name="' + articleName + '"]').outerHeight(true);
+    articleRepertory["Contáctenos"] = $("#wpcf7-f506-p20-o1").offset().top - 50;
+    articleRepertory["Fin"] = $("#wpcf7-f506-p20-o1").offset().top + $("#wpcf7-f506-p20-o1").outerHeight(true);
+    //articleRepertory["Fin"] = $('[data-name="' + articleName + '"]').offset().top + $('[data-name="' + articleName + '"]').outerHeight(true);
     console.log(articleRepertory)
   }
 
@@ -102,7 +105,7 @@ $( document ).ready(function() {
     }
   };
 
-  if (allSections.length != 0) {
+  if (allSections.length > 1) {
     pageNavUpdate();
     $(window).on('resize scroll', function() {
       pageNavUpdate();
